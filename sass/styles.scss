@@ -1,0 +1,57 @@
+$sidebar-color: yellow;
+$sidebar-width: 250px;
+
+*{
+	//border: 1px solid green;
+}
+
+body{
+	padding: 0;
+	//background-color: #7e5e45;
+	//background: radial-gradient(#d1A46b,#b57744);
+}
+nav{
+	position: fixed;
+	left: 0;
+	width: $sidebar-width;
+	height: 100%;
+	background-color: $sidebar-color;
+	a{
+		padding: 20px;
+		text-decoration: none;
+		color: black;
+		display: block;
+	}
+	a:hover{
+		opacity: 0.7;
+		background-color: #f2f2f2;
+	}
+
+}
+
+.container{
+	position: absolute;
+	left: $sidebar-width;
+	width: 60%;
+}
+
+header{
+	text-align: center;
+}
+.post{
+	padding: 10px 20px;
+	border: 1px solid black;
+	.title{
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+
+	.date{
+		font-weight: 700;
+	}
+
+	.author{
+
+	}
+
+}
