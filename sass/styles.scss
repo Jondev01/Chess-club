@@ -38,7 +38,9 @@ nav{
 header{
 	text-align: center;
 }
+
 .post{
+	position: relative;
 	padding: 10px 20px;
 	border: 1px solid black;
 	.title{
@@ -54,4 +56,9 @@ header{
 
 	}
 
+	button{
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
 }
