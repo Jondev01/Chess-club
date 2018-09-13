@@ -28,6 +28,8 @@
 
 		<section class="main">
 			<?php displayTeams(); ?>
+			<div id="displayTeamMembers">
+			</div>
 		</section>
 	</div>
 	<script src="../js/main.js"></script>
