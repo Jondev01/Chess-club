@@ -58,16 +58,21 @@ header{
 	padding: 10px 20px;
 	border: 1px solid black;
 	.title{
-		font-size: 1.5rem;
-		font-weight: 700;
+		margin-bottom: 0;
 	}
 
 	.date{
+		font-size: 0.9em;
 		font-weight: 700;
 	}
 
 	.author{
+		color:#333;
 
+	}
+
+	.text{
+		margin-top: 15px;
 	}
 
 	button{

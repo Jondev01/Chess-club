@@ -1,6 +1,6 @@
 <?php 
 	session_start(); 
-	include 'php/scripts.php';
+	include '../php/scripts.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,28 +8,28 @@
 <head>
 	<title>SK</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 	<nav>
 		<ul>
-			<a href=#><li>Startseite</li></a>
-			<a href=#><li>Über uns</li></a>
-			<a href=#><li>Training</li></a>
+			<a href="../index.php"><li>Startseite</li></a>
+			<a href="about.php"><li>Über uns</li></a>
+			<a href="training.php"><li>Training</li></a>
 			<a href=#><li>Mannschaften</li></a>
-			<a href=#><li>Mitglieder</li></a>
-			<a href=#><li>Kontakt</li></a>
+			<a href="members.php"><li>Mitglieder</li></a>
+			<a href="contact.php"><li>Kontakt</li></a>
 		</ul>
 	</nav>
 	<div class="container">
 		<header>
 			<h1>Mannschaften</h1>
 		</header>
-		
-		<section class="main">
 
+		<section class="main">
+			<?php displayTeams(); ?>
 		</section>
 	</div>
-	<script src="js/main.js"></script>
+	<script src="../js/main.js"></script>
 </body>
 </html>

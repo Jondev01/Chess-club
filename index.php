@@ -14,11 +14,11 @@
 	<nav>
 		<ul>
 			<a href=#><li>Startseite</li></a>
-			<a href=#><li>Über uns</li></a>
-			<a href=#><li>Training</li></a>
-			<a href=#><li>Mannschaften</li></a>
+			<a href="pages/about.php"><li>Über uns</li></a>
+			<a href="pages/training.php"><li>Training</li></a>
+			<a href="pages/teams.php"><li>Mannschaften</li></a>
 			<a href="pages/members.php"><li>Mitglieder</li></a>
-			<a href=#><li>Kontakt</li></a>
+			<a href="pages/contact.php"><li>Kontakt</li></a>
 		</ul>
 	</nav>
 	<div class="container">
