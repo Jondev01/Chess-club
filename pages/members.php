@@ -27,7 +27,8 @@
 		</header>
 		<form id="addMember" method="POST" action="../php/scripts.php">
 			<input type="text" placeholder="Mitgliedsnummer" name="id"/>
-			<input type="text" placeholder="Name" name="name"/>
+			<input type="text" placeholder="Nachname" name="lName"/>
+			<input type="text" placeholder="Vorname" name="fName"/>
 			<input type="text" placeholder="DWZ" name="dwz"/>
 			<input type="text" placeholder="Elo" name="elo"/>
 			<button type="submit" name="addMember">Hinzufügen</button>

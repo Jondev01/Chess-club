@@ -27,7 +27,8 @@
 		</header>
 
 		<section class="main">
-			<?php displayTeams(); ?>
+			<?php displayTeams(); selectMember(); selectBoard();?>
+			<button onclick="addTeamMember()">Spieler zur Mannschaft hinzufügen</button>
 			<div id="displayTeamMembers">
 			</div>
 		</section>

@@ -1,13 +1,16 @@
-$sidebar-color: yellow;
+$sidebar-color: white;
 $sidebar-width: 250px;
 
 *{
 	//border: 1px solid green;
+	box-sizing: border-box;
 }
 
 body{
 	padding: 0;
-	//background-color: #7e5e45;
+	background: linear-gradient(#1f1f1f, #000000);
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
 	//background: radial-gradient(#d1A46b,#b57744);
 }
 nav{
@@ -16,16 +19,20 @@ nav{
 	top:0;
 	width: $sidebar-width;
 	height: 100%;
-	background-color: $sidebar-color;
+	//background-color: $sidebar-color;
+	color: white;
+	border-radius: 2px;
 	a{
 		padding: 20px;
 		text-decoration: none;
-		color: black;
 		display: block;
+		color: inherit;
 	}
 	a:hover{
 		opacity: 0.7;
 		background-color: #f2f2f2;
+		color: #333;
+		border-radius: 10px;
 	}
 
 }
@@ -45,20 +52,44 @@ table{
 
 .container{
 	position: absolute;
-	left: $sidebar-width;
-	width: 60%;
+	left: $sidebar-width+50px;
+	width: 50%;
 }
 
 header{
 	text-align: center;
 }
 
+form{
+	text-align: center;
+	input{
+		padding: 5px;
+		margin: 10px;
+	}
+	textarea{
+		width:100%;
+		height: 200px;
+	}
+}
+button{
+	padding: 10px;
+	border-radius: 10%;
+	background: radial-gradient(#f87d29,#ff631b);
+	color: white;
+	border: none;
+}
 .post{
 	position: relative;
 	padding: 10px 20px;
-	border: 1px solid black;
+	margin: 30px 0px;
+	border-radius: 10px;
+	box-shadow: 1px 0px 2px #ccc, -1px 0px 2px #ccc,
+	 0px 1px 1px #aaa, 0px -1px 2px #aaa;
+	color:white;
+	//Blue background: radial-gradient(#4646ab,#000662);
+	background: radial-gradient(#880000,#f87d29);
 	.title{
-		margin-bottom: 0;
+		margin: 0;
 	}
 
 	.date{
@@ -67,7 +98,6 @@ header{
 	}
 
 	.author{
-		color:#333;
 
 	}
 
@@ -80,4 +110,10 @@ header{
 		top: 5px;
 		right: 5px;
 	}
+}
+
+.delete{
+	background: red;
+	padding: 2px;
+	border-radius: 2px;
 }
