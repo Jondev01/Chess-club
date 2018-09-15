@@ -63,7 +63,7 @@ table tr button {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 200px auto;
   width: 50%;
 }
 
@@ -126,6 +126,9 @@ button {
 .post .date {
   font-size: 0.8em;
   font-weight: 700;
+}
+.post img {
+  width: 100%;
 }
 .post .text {
   margin-top: 40px;

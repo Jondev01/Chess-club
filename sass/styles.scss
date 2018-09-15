@@ -91,7 +91,7 @@ table{
 .container{
 	//position: absolute;
 	//left: $sidebar-width+50px;
-	margin: 0 auto;
+	margin: $header-height auto;
 	width: 50%;
 }
 
@@ -162,6 +162,10 @@ button{
 	}
 
 	.author{
+	}
+
+	img{
+		width: 100%;
 	}
 
 	.text{

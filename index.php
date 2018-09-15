@@ -28,9 +28,10 @@
 		<h1><div class="block">SK</div> Bad-Sooden Allendorf</h1>
 	</header>
 	<div class="container">
-		<form id="addPost" method="POST" action="php/scripts.php">
+		<form id="addPost" method="POST" action="php/scripts.php" enctype="multipart/form-data">
 			<input type="text" placeholder="Titel" name="title"/>
 			<input type="text" placeholder="Autor" name="author"/>
+			<input type="file" name="fileToUpload" id="fileToUpload">
 			<textarea name="text">Text</textarea>
 			<button type="submit" name="addPost">Abschicken</button>
 		</form>
