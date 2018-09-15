@@ -1,5 +1,39 @@
 $sidebar-color: white;
 $sidebar-width: 250px;
+$square-size: 50px;
+$header-height: 4*$square-size;
+%chess-board{
+	:before{
+	 		content: "";
+	 		z-index:-2;
+	    	position: absolute;
+	    	width: 100%;
+	   	 	height: 100%;
+	    	top: 0px;
+	    	left: 0px;
+	    	filter: opacity(90%);
+	    	//, blur(0px);
+		 	background-color: #ec7600;
+			background-size: 2*$square-size 2*$square-size;
+			background-position: 0px 0px, $square-size $square-size; 
+			opacity: 0.95;
+			background-image:
+				linear-gradient(-45deg, #500, #880000 25%, transparent 25%, transparent 75%, #880000 75%, #500),
+	            linear-gradient(-45deg, #500, #880000 25%, transparent 25%, #f9853c, transparent 75%, #880000 75%, #500);
+	    }
+}
+
+%shadow{
+	text-shadow:
+        0.03em 0 black,
+        0 0.03em black,
+        -0.03em 0 black,
+        0 -0.03em black,
+        -0.03em -0.03em black,
+        -0.03em 0.03em black,
+        0.03em -0.03em black,
+        0.03em 0.03em black;
+}
 
 *{
 	//border: 1px solid green;
@@ -8,15 +42,19 @@ $sidebar-width: 250px;
 
 body{
 	padding: 0;
-	background: linear-gradient(#1f1f1f, #000000);
+	background-image: repeating-linear-gradient(#1f1f1f, #000000 5px);
 	color: white;
+	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
+	//@extend %chess-board;
 	//background: radial-gradient(#d1A46b,#b57744);
 }
 nav{
 	position: fixed;
 	left: 0;
-	top:0;
+	top: $header-height;
+	z-index: 100;
+	padding-top: 60px;
 	width: $sidebar-width;
 	height: 100%;
 	//background-color: $sidebar-color;
@@ -38,7 +76,7 @@ nav{
 }
 
 table{
-   border: 1px solid black;
+   //border: 1px solid black;
    width: 100%;
    text-align: left;
    tr{
@@ -51,13 +89,37 @@ table{
 }
 
 .container{
-	position: absolute;
-	left: $sidebar-width+50px;
+	//position: absolute;
+	//left: $sidebar-width+50px;
+	margin: 0 auto;
 	width: 50%;
 }
 
 header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: $header-height;
 	text-align: center;
+	padding: 20px;
+	margin: 0;
+	z-index: 100;
+	text-shadow: 0px 5px 4px #222;
+	//@extend %shadow;
+	@extend %chess-board;
+	.block{
+		display: block;
+		margin: 20px;
+	}
+	.logo{
+		position: absolute;
+		top: 0;
+		right: 20px;
+		height: 200px;
+		img{
+			height: 100%;
+		}
+	}
 }
 
 form{
@@ -81,28 +143,41 @@ button{
 .post{
 	position: relative;
 	padding: 10px 20px;
-	margin: 30px 0px;
+	margin-bottom: 3em;
 	border-radius: 10px;
-	box-shadow: 1px 0px 2px #ccc, -1px 0px 2px #ccc,
-	 0px 1px 1px #aaa, 0px -1px 2px #aaa;
-	color:white;
-	//Blue background: radial-gradient(#4646ab,#000662);
-	background: radial-gradient(#880000,#f87d29);
+	//box-shadow: 1px 0px 2px #3f3f3f, -1px 0px 2px #3f3f3f,
+	 //0px 1px 1px #3f3f3f, 0px -1px 2px #3f3f3f;
+	color: black;
+	background-image: radial-gradient(#ccc, #ccc);
+	//background-image: radial-gradient(#3f3f3f, #1f1f1f);
+	//@extend %shadow;
+
 	.title{
 		margin: 0;
 	}
 
 	.date{
-		font-size: 0.9em;
+		font-size: 0.8em;
 		font-weight: 700;
 	}
 
 	.author{
-
 	}
 
 	.text{
-		margin-top: 15px;
+		margin-top: 40px;
+		line-height: 1.6;
+		text-align: justify;
+		//color: black;
+		/*text-shadow:
+        1px 0 white,
+        0 1px white,
+        -1px 0 white,
+        0 -1px white,
+        -1px -1px white,
+        -1px 1px white,
+        1px 1px white,
+       1px 1px white;*/
 	}
 
 	button{

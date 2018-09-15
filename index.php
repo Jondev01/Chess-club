@@ -21,10 +21,13 @@
 			<a href="pages/contact.php"><li>Kontakt</li></a>
 		</ul>
 	</nav>
+	<header>
+		<div class="logo">
+			<img src="img/logo.png"/>
+		</div>
+		<h1><div class="block">SK</div> Bad-Sooden Allendorf</h1>
+	</header>
 	<div class="container">
-		<header>
-			<h1>SK Bad-Sooden Allendorf</h1>
-		</header>
 		<form id="addPost" method="POST" action="php/scripts.php">
 			<input type="text" placeholder="Titel" name="title"/>
 			<input type="text" placeholder="Autor" name="author"/>

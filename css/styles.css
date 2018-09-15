@@ -1,18 +1,37 @@
+header :before {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  filter: opacity(90%);
+  background-color: #ec7600;
+  background-size: 100px 100px;
+  background-position: 0px 0px, 50px 50px;
+  opacity: 0.95;
+  background-image: linear-gradient(-45deg, #500, #880000 25%, transparent 25%, transparent 75%, #880000 75%, #500), linear-gradient(-45deg, #500, #880000 25%, transparent 25%, #f9853c, transparent 75%, #880000 75%, #500);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   padding: 0;
-  background: linear-gradient(#1f1f1f, #000000);
+  background-image: repeating-linear-gradient(#1f1f1f, #000000 5px);
   color: white;
+  font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 nav {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 200px;
+  z-index: 100;
+  padding-top: 60px;
   width: 250px;
   height: 100%;
   color: white;
@@ -32,7 +51,6 @@ nav a:hover {
 }
 
 table {
-  border: 1px solid black;
   width: 100%;
   text-align: left;
 }
@@ -45,13 +63,33 @@ table tr button {
 }
 
 .container {
-  position: absolute;
-  left: 300px;
+  margin: 0 auto;
   width: 50%;
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 200px;
   text-align: center;
+  padding: 20px;
+  margin: 0;
+  z-index: 100;
+  text-shadow: 0px 5px 4px #222;
+}
+header .block {
+  display: block;
+  margin: 20px;
+}
+header .logo {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  height: 200px;
+}
+header .logo img {
+  height: 100%;
 }
 
 form {
@@ -77,21 +115,31 @@ button {
 .post {
   position: relative;
   padding: 10px 20px;
-  margin: 30px 0px;
+  margin-bottom: 3em;
   border-radius: 10px;
-  box-shadow: 1px 0px 2px #ccc, -1px 0px 2px #ccc, 0px 1px 1px #aaa, 0px -1px 2px #aaa;
-  color: white;
-  background: radial-gradient(#880000, #f87d29);
+  color: black;
+  background-image: radial-gradient(#ccc, #ccc);
 }
 .post .title {
   margin: 0;
 }
 .post .date {
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 700;
 }
 .post .text {
-  margin-top: 15px;
+  margin-top: 40px;
+  line-height: 1.6;
+  text-align: justify;
+  /*text-shadow:
+        1px 0 white,
+        0 1px white,
+        -1px 0 white,
+        0 -1px white,
+        -1px -1px white,
+        -1px 1px white,
+        1px 1px white,
+       1px 1px white;*/
 }
 .post button {
   position: absolute;
