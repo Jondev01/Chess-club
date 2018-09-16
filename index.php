@@ -1,5 +1,4 @@
 <?php 
-	session_start(); 
 	include 'php/scripts.php';
 ?>
 
@@ -21,14 +20,26 @@
 			<a href="pages/contact.php"><li>Kontakt</li></a>
 		</ul>
 	</nav>
-	<header>
+	<header class="fixed-header">
 		<div class="logo">
 			<img src="img/logo.png"/>
 		</div>
 		<h1><div class="block">SK</div> Bad-Sooden Allendorf</h1>
 	</header>
 	<div class="container">
-		<form id="addPost" method="POST" action="php/scripts.php" enctype="multipart/form-data">
+		<?php 
+				if(isset($_SESSION['user']) && $_SESSION['user']=="admin"){
+					echo '<h1>Angemeldet</h1>';
+				} else{
+					echo '<h1>Nicht Angemeldet</h1>';
+				}
+		?>
+		<form id="login" method="post" action="php/login.php">
+		<input type="text" placeholder="Benutzername" name="username"/>
+		<input type="password" placeholder="Passwort" name="password"/>
+		<button type="submit" name="login">Anmelden</button>
+		</form>
+		<form id="addPost" class="admin" method="POST" action="php/scripts.php" enctype="multipart/form-data">
 			<input type="text" placeholder="Titel" name="title"/>
 			<input type="text" placeholder="Autor" name="author"/>
 			<input type="file" name="fileToUpload" id="fileToUpload">
@@ -40,5 +51,6 @@
 		</section>
 	</div>
 	<script src="js/main.js"></script>
+	<script>isAdmin(<?php echo isset($_SESSION['user']) && $_SESSION['user']=="admin"?>)</script>; 
 </body>
 </html>
