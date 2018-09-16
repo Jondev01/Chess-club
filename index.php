@@ -24,7 +24,7 @@
 		<div class="logo">
 			<img src="img/logo.png"/>
 		</div>
-		<h1><div class="block">SK</div> Bad-Sooden Allendorf</h1>
+		<h1 class="header-title"><div class="block">SK</div> Bad Sooden-Allendorf</h1>
 	</header>
 	<div class="container">
 		<?php 
