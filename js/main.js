@@ -88,7 +88,10 @@ function addTeamMember(){
 
 function isAdmin(isAdmin){
 	let elements = document.getElementsByClassName('admin');
+	//elements = [...elements].concat([...document.getElementsByClassName('member')]);
 	for(let el of elements){
 		el.hidden = !isAdmin;
 	}
+
+
 }

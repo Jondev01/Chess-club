@@ -43,7 +43,8 @@ $header-height: 3*$square-size;
 body{
 	padding: 0;
 	margin: 0;
-	background-image: repeating-linear-gradient(45deg, #1f1f1f, #000000 2px, #1f1f1f 5px);
+	//background-image: repeating-linear-gradient(45deg, #1f1f1f, #000000 2px, #1f1f1f 5px);
+	background-color: black;
 	color: white;
 	font-size: 20px;
 	font-family: Arial, Helvetica, sans-serif;
@@ -153,10 +154,11 @@ button{
 	padding: 10px 20px;
 	margin-bottom: 3em;
 	border-radius: 10px;
-	//box-shadow: 1px 0px 2px #3f3f3f, -1px 0px 2px #3f3f3f,
-	 //0px 1px 1px #3f3f3f, 0px -1px 2px #3f3f3f;
-	color: black;
-	background-image: radial-gradient(#ccc, #ccc);
+	box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #2f2f2f,
+	 0px 2px 1px 2px #222, 0px -2px 2px 2px #222;
+	color: white;
+	//background-image: radial-gradient(#ccc, #ccc);
+	background-image: repeating-linear-gradient(-45deg, #1f1f1f, #000000 2px, #1f1f1f 5px);
 	//background-image: radial-gradient(#3f3f3f, #1f1f1f);
 	//@extend %shadow;
 

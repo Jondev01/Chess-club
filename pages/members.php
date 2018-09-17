@@ -24,7 +24,7 @@
 		<header>
 			<h1>Mitglieder</h1>
 		</header>
-		<form id="addMember" method="POST" action="../php/scripts.php">
+		<form id="addMember" class="admin" method="POST" action="../php/scripts.php">
 			<input type="text" placeholder="Mitgliedsnummer" name="id"/>
 			<input type="text" placeholder="Nachname" name="lName"/>
 			<input type="text" placeholder="Vorname" name="fName"/>
@@ -37,5 +37,6 @@
 		</section>
 	</div>
 	<script src="../js/main.js"></script>
+	<script>isAdmin(<?php echo isset($_SESSION['user']) && $_SESSION['user']=="admin"?>)</script>; 
 </body>
 </html>
