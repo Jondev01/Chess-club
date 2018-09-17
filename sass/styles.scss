@@ -52,7 +52,7 @@ body{
 	//background: radial-gradient(#d1A46b,#b57744);
 }
 nav{
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: $header-height;
 	z-index: 100;
@@ -77,6 +77,11 @@ nav{
 
 }
 
+.fixed-nav{
+	position:fixed;
+	top: 0;
+}
+
 table{
    //border: 1px solid black;
    width: 100%;
@@ -92,6 +97,10 @@ table{
 	margin: $header-height+50px auto;
 	margin-bottom: 0;
 	width: 50%;
+}
+
+.main{
+	text-align: center;
 }
 
 header{
@@ -160,6 +169,7 @@ button:hover{
 	border-radius: 10px;
 	box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #222,
 	 0px 2px 1px 2px #222, 0px -2px 2px 2px #222;
+	 text-align: left;
 	color: white;
 	//background-image: radial-gradient(#ccc, #ccc);
 	background-image: repeating-linear-gradient(-45deg, #1f1f1f, #000000 2px, #1f1f1f 5px);
@@ -217,6 +227,15 @@ button:hover{
 
 .comment:first-child{
 	border-top: 1px solid white;
+}
+
+.show-more{
+	background: #111;
+	color: #bbb;
+}
+
+button:hover{
+		cursor: pointer;
 }
 
 .delete{

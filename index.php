@@ -24,7 +24,7 @@
 		<div class="logo">
 			<img src="img/logo.png"/>
 		</div>
-		<h1 class="header-title"><div class="block">SK</div> Bad Sooden-Allendorf</h1>
+		<h1 class="header-title"><div class="block">Schachklub</div> Bad Sooden-Allendorf</h1>
 	</header>
 	<div class="container">
 		<!--<?php 
@@ -46,10 +46,9 @@
 			<textarea name="text">Text</textarea>
 			<button type="submit" name="addPost">Abschicken</button>
 		</form>
-		<section id="posts" class="main">
+		<section class="main">
 			<?php displayPosts(); ?>
 		</section>
-		<button onclick="displayMorePosts()">Ältere Beiträge anzeigen</button>
 	</div>
 	<script src="js/main.js"></script>
 	<script>isAdmin(<?php echo isset($_SESSION['user']) && $_SESSION['user']=="admin"?>)</script>; 

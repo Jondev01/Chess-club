@@ -1,3 +1,12 @@
+window.addEventListener("scroll", function() {
+  let header = document.getElementsByTagName("header")[0];
+  let nav = document.getElementsByTagName('nav')[0];
+  if (window.scrollY > (header.offsetTop + header.offsetHeight)) {
+      nav.className ="fixed-nav";
+  }
+  else nav.className="";
+});
+
 
 /*selectTeams.addEventListener('change', function(){displayTeamMembers()} );*/
 let selectTeams = document.getElementById('select-teams');
@@ -68,7 +77,7 @@ function displayTeamMembers(){
 	 xhttp.send(`displayTeamMembers=${id}`);
 }
 
-function displayMorePosts(){
+function displayMorePosts(el){
 	if(displayMorePosts.posts === undefined)
 		displayMorePosts.posts = 5;
 	else{
@@ -77,6 +86,7 @@ function displayMorePosts(){
 	var xhttp = new XMLHttpRequest();
  	xhttp.onreadystatechange = function() {
     	if (this.readyState == 4 && this.status == 200) {
+    		el.remove();
     		document.getElementById('posts').innerHTML += this.responseText;
     	}
   	};

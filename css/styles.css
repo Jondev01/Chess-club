@@ -28,7 +28,7 @@ body {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 150px;
   z-index: 100;
@@ -51,6 +51,11 @@ nav a:hover {
   border-radius: 10px;
 }
 
+.fixed-nav {
+  position: fixed;
+  top: 0;
+}
+
 table {
   width: 100%;
   text-align: left;
@@ -67,6 +72,10 @@ table tr td {
   margin: 200px auto;
   margin-bottom: 0;
   width: 50%;
+}
+
+.main {
+  text-align: center;
 }
 
 header {
@@ -130,6 +139,7 @@ button:hover {
   margin-bottom: 3em;
   border-radius: 10px;
   box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #222, 0px 2px 1px 2px #222, 0px -2px 2px 2px #222;
+  text-align: left;
   color: white;
   background-image: repeating-linear-gradient(-45deg, #1f1f1f, #000000 2px, #1f1f1f 5px);
 }
@@ -172,6 +182,15 @@ button:hover {
 
 .comment:first-child {
   border-top: 1px solid white;
+}
+
+.show-more {
+  background: #111;
+  color: #bbb;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .delete {
