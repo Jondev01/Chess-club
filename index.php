@@ -27,13 +27,6 @@
 		<h1 class="header-title"><div class="block">Schachklub</div> Bad Sooden-Allendorf</h1>
 	</header>
 	<div class="container">
-		<!--<?php 
-				if(isset($_SESSION['user']) && $_SESSION['user']=="admin"){
-					echo '<h1>Angemeldet</h1>';
-				} else{
-					echo '<h1>Nicht Angemeldet</h1>';
-				}
-		?>-->
 		<form id="login" method="post" action="php/login.php">
 		<input type="text" placeholder="Benutzername" name="username"/>
 		<input type="password" placeholder="Passwort" name="password"/>
@@ -51,6 +44,6 @@
 		</section>
 	</div>
 	<script src="js/main.js"></script>
-	<script>isAdmin(<?php echo isset($_SESSION['user']) && $_SESSION['user']=="admin"?>)</script>; 
+	<script>setTimeout(access(<?php echo '"'; echo isset($_SESSION['user']) ? $_SESSION['user'] : false; echo '"';?>),50);</script> 
 </body>
 </html>

@@ -27,11 +27,12 @@
 
 		<section class="main">
 			<?php displayTeams(); selectMember(); selectBoard();?>
-			<button onclick="addTeamMember()">Spieler zur Mannschaft hinzufügen</button>
+			<button class="admina" onclick="addTeamMember()">Spieler zur Mannschaft hinzufügen</button>
 			<div id="displayTeamMembers">
 			</div>
 		</section>
 	</div>
 	<script src="../js/main.js"></script>
+	<script>setTimeout(access(<?php echo '"'; echo isset($_SESSION['user']) ? $_SESSION['user'] : false; echo '"';?>),50);</script> 
 </body>
 </html>

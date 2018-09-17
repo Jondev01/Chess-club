@@ -30,5 +30,6 @@
 		</section>
 	</div>
 	<script src="../js/main.js"></script>
+	<script>setTimeout(access(<?php echo '"'; echo isset($_SESSION['user']) ? $_SESSION['user'] : false; echo '"';?>),50);</script> 
 </body>
 </html>

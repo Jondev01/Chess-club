@@ -35,6 +35,11 @@ $header-height: 3*$square-size;
         0.03em 0.03em black;
 }
 
+%box-shadow{
+	box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #222,
+	 0px 2px 1px 2px #222, 0px -2px 2px 2px #222;
+}
+
 *{
 	//border: 1px solid green;
 	box-sizing: border-box;
@@ -169,7 +174,6 @@ button:hover{
 	border-radius: 10px;
 	box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #222,
 	 0px 2px 1px 2px #222, 0px -2px 2px 2px #222;
-	 text-align: left;
 	color: white;
 	//background-image: radial-gradient(#ccc, #ccc);
 	background-image: repeating-linear-gradient(-45deg, #1f1f1f, #000000 2px, #1f1f1f 5px);
@@ -207,10 +211,9 @@ button:hover{
 }
 
 .comments{
-	//position: absolute;
-	//bottom: 0;
 	padding: 20px 0;
 	.comment{
+		text-align: left;
 		padding: 10px 0px;
 		border-bottom: 1px solid white;
 
@@ -234,6 +237,13 @@ button:hover{
 	color: #bbb;
 }
 
+.show-more-comments{
+	margin: 10px auto;
+	//background-image: repeating-linear-gradient(-45deg, #1f1f1f, #000000 2px, #1f1f1f 5px);
+	background: #111;
+	@extend %box-shadow;
+	color: #bbb;
+}
 button:hover{
 		cursor: pointer;
 }
@@ -245,4 +255,7 @@ button:hover{
 	background: red;
 	padding: 2px;
 	border-radius: 2px;
+}
+
+.admin{
 }

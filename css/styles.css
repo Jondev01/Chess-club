@@ -14,6 +14,10 @@ header :before {
   background-image: linear-gradient(-45deg, #500, #880000 25%, transparent 25%, transparent 75%, #880000 75%, #500), linear-gradient(-45deg, #500, #880000 25%, transparent 25%, #f9853c, transparent 75%, #880000 75%, #500);
 }
 
+.show-more-comments {
+  box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #222, 0px 2px 1px 2px #222, 0px -2px 2px 2px #222;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -139,7 +143,6 @@ button:hover {
   margin-bottom: 3em;
   border-radius: 10px;
   box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #222, 0px 2px 1px 2px #222, 0px -2px 2px 2px #222;
-  text-align: left;
   color: white;
   background-image: repeating-linear-gradient(-45deg, #1f1f1f, #000000 2px, #1f1f1f 5px);
 }
@@ -169,6 +172,7 @@ button:hover {
   padding: 20px 0;
 }
 .comments .comment {
+  text-align: left;
   padding: 10px 0px;
   border-bottom: 1px solid white;
 }
@@ -185,6 +189,12 @@ button:hover {
 }
 
 .show-more {
+  background: #111;
+  color: #bbb;
+}
+
+.show-more-comments {
+  margin: 10px auto;
   background: #111;
   color: #bbb;
 }
