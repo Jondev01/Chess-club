@@ -27,13 +27,13 @@
 		<h1 class="header-title"><div class="block">SK</div> Bad Sooden-Allendorf</h1>
 	</header>
 	<div class="container">
-		<?php 
+		<!--<?php 
 				if(isset($_SESSION['user']) && $_SESSION['user']=="admin"){
 					echo '<h1>Angemeldet</h1>';
 				} else{
 					echo '<h1>Nicht Angemeldet</h1>';
 				}
-		?>
+		?>-->
 		<form id="login" method="post" action="php/login.php">
 		<input type="text" placeholder="Benutzername" name="username"/>
 		<input type="password" placeholder="Passwort" name="password"/>
@@ -46,9 +46,10 @@
 			<textarea name="text">Text</textarea>
 			<button type="submit" name="addPost">Abschicken</button>
 		</form>
-		<section class="main">
+		<section id="posts" class="main">
 			<?php displayPosts(); ?>
 		</section>
+		<button onclick="displayMorePosts()">Ältere Beiträge anzeigen</button>
 	</div>
 	<script src="js/main.js"></script>
 	<script>isAdmin(<?php echo isset($_SESSION['user']) && $_SESSION['user']=="admin"?>)</script>; 

@@ -57,7 +57,7 @@ function deleteTeamMember(el){
 function displayTeamMembers(){
 	let selectTeams = document.getElementById('select-teams');
 	let id = selectTeams.options[selectTeams.selectedIndex].id;
-	 var xhttp = new XMLHttpRequest();
+	var xhttp = new XMLHttpRequest();
  	xhttp.onreadystatechange = function() {
     	if (this.readyState == 4 && this.status == 200) {
     		document.getElementById('displayTeamMembers').innerHTML = this.responseText;
@@ -66,6 +66,38 @@ function displayTeamMembers(){
  	 xhttp.open("POST", "../php/scripts.php", true);
  	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	 xhttp.send(`displayTeamMembers=${id}`);
+}
+
+function displayMorePosts(){
+	if(displayMorePosts.posts === undefined)
+		displayMorePosts.posts = 5;
+	else{
+		displayMorePosts.posts +=5;
+	}
+	var xhttp = new XMLHttpRequest();
+ 	xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+    		document.getElementById('posts').innerHTML += this.responseText;
+    	}
+  	};
+ 	 xhttp.open("POST", "php/scripts.php", true);
+ 	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	 xhttp.send(`displayMorePosts=${displayMorePosts.posts}`);
+}
+
+function displayMoreComments(el){
+	let id = el.parentNode.parentNode.id;
+	let displayMoreComments = 3;
+	var xhttp = new XMLHttpRequest();
+ 	xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+    		el.hidden = true;
+    		document.getElementById(`comments${id}`).innerHTML += this.responseText;
+    	}
+  	};
+ 	 xhttp.open("POST", "php/scripts.php", true);
+ 	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	 xhttp.send(`id=${id}&displayMoreComments=${displayMoreComments}`);
 }
 
 function addTeamMember(){

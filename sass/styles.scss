@@ -89,14 +89,15 @@ table{
 
 .container{
 	position: relative;
-	margin: $header-height auto;
+	margin: $header-height+50px auto;
+	margin-bottom: 0;
 	width: 50%;
 }
 
 header{
 	@extend %chess-board;
 	position: relative;
-	//top: 0;
+	top: 0;
 	width: 100%;
 	height: $header-height;
 	text-align: center;
@@ -126,7 +127,7 @@ header{
 }
 
 .fixed-header{
-	position: fixed;
+	position: absolute;
 	top: 0;
 }
 
@@ -148,13 +149,16 @@ button{
 	color: white;
 	border: none;
 }
+button:hover{
+		opacity: 0.8;
+}
 
 .post{
 	position: relative;
 	padding: 10px 20px;
 	margin-bottom: 3em;
 	border-radius: 10px;
-	box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #2f2f2f,
+	box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #222,
 	 0px 2px 1px 2px #222, 0px -2px 2px 2px #222;
 	color: white;
 	//background-image: radial-gradient(#ccc, #ccc);
@@ -183,6 +187,36 @@ button{
 		line-height: 1.6;
 		text-align: justify;
 	}
+
+	form{
+		margin-top: 20px;
+		textarea{
+			height: 70px;
+		}
+	}
+}
+
+.comments{
+	//position: absolute;
+	//bottom: 0;
+	padding: 20px 0;
+	.comment{
+		padding: 10px 0px;
+		border-bottom: 1px solid white;
+
+		.comment-info{
+			font-size: 0.9em;
+			font-style: italic;
+		}
+
+		.comment-text{
+			padding: 10px 0;
+		}
+	}
+}
+
+.comment:first-child{
+	border-top: 1px solid white;
 }
 
 .delete{
