@@ -32,18 +32,13 @@
 		<input type="password" placeholder="Passwort" name="password"/>
 		<button type="submit" name="login">Anmelden</button>
 		</form>
-		<form id="addPost" class="admin" method="POST" action="php/scripts.php" enctype="multipart/form-data">
-			<input type="text" placeholder="Titel" name="title"/>
-			<input type="text" placeholder="Autor" name="author"/>
-			<input type="file" name="fileToUpload" id="fileToUpload">
-			<textarea name="text">Text</textarea>
-			<button type="submit" name="addPost">Abschicken</button>
-		</form>
+		<?php if(isset($_SESSION['rights']) &&  $_SESSION['rights']== "admin")
+				displayAddPost();
+		?>
 		<section class="main">
 			<?php displayPosts(); ?>
 		</section>
 	</div>
 	<script src="js/main.js"></script>
-	<script>setTimeout(access(<?php echo '"'; echo isset($_SESSION['user']) ? $_SESSION['user'] : false; echo '"';?>),50);</script> 
 </body>
 </html>
