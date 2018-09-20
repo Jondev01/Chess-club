@@ -127,24 +127,3 @@ function addTeamMember(){
  	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	 xhttp.send(`teamId=${teamId}&memberId=${memberId}&board=${board}`);
 }
-
-function access(type){
-		isAdmin(type === "admin");
-		isMember(type ==="Mitglied");
-}
-
-function isAdmin(isAdmin){
-	isMember(true);
-	let elements = document.getElementsByClassName('admin');
-	//elements = [...elements].concat([...document.getElementsByClassName('member')]);
-	for(let el of elements){
-		el.hidden = !isAdmin;
-	}
-}
-
-function isMember(isMember){
-	let elements = document.getElementsByClassName('member');
-	for(let el of elements){
-		el.hidden = !isMember;
-	}
-}

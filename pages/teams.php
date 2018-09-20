@@ -26,13 +26,14 @@
 		</header>
 
 		<section class="main">
-			<?php displayTeams(); selectMember(); selectBoard();?>
-			<button class="admina" onclick="addTeamMember()">Spieler zur Mannschaft hinzufügen</button>
+			<?php displayTeams(); selectMember(); selectBoard();
+			if(isAdmin())
+				echo '<button class="admin" onclick="addTeamMember()">Spieler zur Mannschaft hinzufügen</button>';
+			?>
 			<div id="displayTeamMembers">
 			</div>
 		</section>
 	</div>
 	<script src="../js/main.js"></script>
-	<script>setTimeout(access(<?php echo '"'; echo isset($_SESSION['user']) ? $_SESSION['user'] : false; echo '"';?>),100);</script> 
 </body>
 </html>

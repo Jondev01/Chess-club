@@ -24,19 +24,20 @@
 		<header>
 			<h1>Mitglieder</h1>
 		</header>
-		<form id="addMember" class="admin" method="POST" action="../php/scripts.php">
-			<input type="text" placeholder="Mitgliedsnummer" name="id"/>
-			<input type="text" placeholder="Nachname" name="lName"/>
-			<input type="text" placeholder="Vorname" name="fName"/>
-			<input type="text" placeholder="DWZ" name="dwz"/>
-			<input type="text" placeholder="Elo" name="elo"/>
-			<button type="submit" name="addMember">Hinzufügen</button>
-		</form>
+		<?php
+		if(isAdmin())
+			echo '<form id="addMember" class="admin" method="POST" action="../php/scripts.php">
+					<input type="text" placeholder="Mitgliedsnummer" name="id"/>
+					<input type="text" placeholder="Nachname" name="lName"/>
+					<input type="text" placeholder="Vorname" name="fName"/>
+					<input type="text" placeholder="DWZ" name="dwz"/>
+					<input type="text" placeholder="Elo" name="elo"/>
+					<button type="submit" name="addMember">Hinzufügen</button>
+				</form>'; ?>
 		<section class="main">
 			<?php displayMembers(); ?>
 		</section>
 	</div>
 	<script src="../js/main.js"></script>
-	<script>setTimeout(access(<?php echo '"'; echo isset($_SESSION['user']) ? $_SESSION['user'] : false; echo '"';?>),100);</script> 
 </body>
 </html>
