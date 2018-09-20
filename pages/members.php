@@ -16,14 +16,18 @@
 			<a href="about.php"><li>Über uns</li></a>
 			<a href="training.php"><li>Training</li></a>
 			<a href="teams.php"><li>Mannschaften</li></a>
-			<a href=#><li>Mitglieder</li></a>
+			<a class="current" href=#><li>Mitglieder</li></a>
 			<a href="contact.php"><li>Kontakt</li></a>
 		</ul>
 	</nav>
+	<header class="fixed-header">
+		<div class="logo">
+			<img src="../img/logo.png"/>
+		</div>
+		<h1 class="header-title"><div class="block">Schachklub</div> Bad Sooden-Allendorf</h1>
+	</header>
 	<div class="container">
-		<header>
 			<h1>Mitglieder</h1>
-		</header>
 		<?php
 		if(isAdmin())
 			echo '<form id="addMember" class="admin" method="POST" action="../php/scripts.php">

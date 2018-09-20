@@ -42,7 +42,7 @@ $header-height: 3*$square-size;
 
 *{
 	//border: 1px solid green;
-	box-sizing: border-box;
+	//box-sizing: border-box;
 }
 
 body{
@@ -72,12 +72,28 @@ nav{
 		text-decoration: none;
 		display: block;
 		color: inherit;
+		border: 2px solid black;
 	}
 	a:hover{
-		opacity: 0.7;
-		background-color: #f2f2f2;
-		color: #333;
-		border-radius: 10px;
+		background-color: inherit;
+		border: 2px solid #f68028;
+		border-radius: 20px;
+	}
+
+	.current:hover{
+		background-color: inherit;
+		color: #f68028;
+		border: 2px solid #f68028;
+	}
+
+	.current{
+		font-weight: bold;
+		color: #f68028;
+		//border: 1px solid yellow;
+		//border-radius: 20px;
+		:hover{
+		//	background-color: inherit;
+		}
 	}
 
 }

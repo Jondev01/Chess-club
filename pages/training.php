@@ -14,16 +14,20 @@
 		<ul>
 			<a href="../index.php"><li>Startseite</li></a>
 			<a href="about.php"><li>Über uns</li></a>
-			<a href=#><li>Training</li></a>
+			<a class="current" href=#><li>Training</li></a>
 			<a href="teams.php"><li>Mannschaften</li></a>
 			<a href="members.php"><li>Mitglieder</li></a>
 			<a href="contact.php"><li>Kontakt</li></a>
 		</ul>
 	</nav>
+	<header class="fixed-header">
+		<div class="logo">
+			<img src="../img/logo.png"/>
+		</div>
+		<h1 class="header-title"><div class="block">Schachklub</div> Bad Sooden-Allendorf</h1>
+	</header>
 	<div class="container">
-		<header>
-			<h1>Training</h1>
-		</header>
+		<h1>Training</h1>
 
 		<section class="main">
 
