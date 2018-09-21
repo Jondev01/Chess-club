@@ -1,5 +1,6 @@
 $sidebar-color: white;
 $sidebar-width: 250px;
+$primary-color: #f68028;
 $square-size: 50px;
 $header-height: 3*$square-size;
 %chess-board{
@@ -42,7 +43,7 @@ $header-height: 3*$square-size;
 
 *{
 	//border: 1px solid green;
-	//box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body{
@@ -61,7 +62,7 @@ nav{
 	left: 0;
 	top: $header-height;
 	z-index: 100;
-	padding-top: 60px;
+	padding-top: 30px;
 	width: $sidebar-width;
 	height: 100%;
 	//background-color: $sidebar-color;
@@ -72,25 +73,23 @@ nav{
 		text-decoration: none;
 		display: block;
 		color: inherit;
-		border: 2px solid black;
+		border: 2px solid transparent;
 	}
 	a:hover{
 		background-color: inherit;
-		border: 2px solid #f68028;
+		border: 2px solid $primary-color;
 		border-radius: 20px;
 	}
 
 	.current:hover{
 		background-color: inherit;
 		color: #f68028;
-		border: 2px solid #f68028;
+		border: 2px solid $primary-color;
 	}
 
 	.current{
 		font-weight: bold;
-		color: #f68028;
-		//border: 1px solid yellow;
-		//border-radius: 20px;
+		color: $primary-color;
 		:hover{
 		//	background-color: inherit;
 		}
@@ -160,22 +159,26 @@ header{
 	position: absolute;
 	top: 0;
 }
-
 form{
 	text-align: center;
+	margin-bottom: 10px;
 	input{
 		padding: 5px;
 		margin: 10px;
+		border-radius: 20px;
 	}
 	textarea{
 		width:100%;
 		height: 200px;
+		border-radius: 40px;
+		padding: 20px;
 	}
 }
+
 button{
 	padding: 10px;
-	border-radius: 10%;
-	background: radial-gradient(#f87d29,#ff631b);
+	border-radius: 20px;
+	background-color: $primary-color;
 	color: white;
 	border: none;
 }
@@ -275,3 +278,24 @@ button:hover{
 
 .admin{
 }
+
+.login{
+	//position:absolute;
+	//top: $header-height;
+	//left: 0;
+	text-align: center;
+	padding: 10px;
+	z-index: 100;
+	input{
+		width: 100px;
+		padding: 5px;
+		border-radius: 20px;
+		margin: 10px 0;
+		@extend %box-shadow;
+	}
+
+	button {
+		@extend %box-shadow;
+	}
+}
+

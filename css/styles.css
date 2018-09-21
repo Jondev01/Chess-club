@@ -14,8 +14,12 @@ header :before {
   background-image: linear-gradient(-45deg, #500, #880000 25%, transparent 25%, transparent 75%, #880000 75%, #500), linear-gradient(-45deg, #500, #880000 25%, transparent 25%, #f9853c, transparent 75%, #880000 75%, #500);
 }
 
-.show-more-comments {
+.login button, .login input, .show-more-comments {
   box-shadow: 2px 0px 2px 2px #222, -2px 0px 2px 2px #222, 0px 2px 1px 2px #222, 0px -2px 2px 2px #222;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -32,7 +36,7 @@ nav {
   left: 0;
   top: 150px;
   z-index: 100;
-  padding-top: 60px;
+  padding-top: 30px;
   width: 250px;
   height: 100%;
   color: white;
@@ -43,7 +47,7 @@ nav a {
   text-decoration: none;
   display: block;
   color: inherit;
-  border: 2px solid black;
+  border: 2px solid transparent;
 }
 nav a:hover {
   background-color: inherit;
@@ -119,20 +123,24 @@ header .logo img {
 
 form {
   text-align: center;
+  margin-bottom: 10px;
 }
 form input {
   padding: 5px;
   margin: 10px;
+  border-radius: 20px;
 }
 form textarea {
   width: 100%;
   height: 200px;
+  border-radius: 40px;
+  padding: 20px;
 }
 
 button {
   padding: 10px;
-  border-radius: 10%;
-  background: radial-gradient(#f87d29, #ff631b);
+  border-radius: 20px;
+  background-color: #f68028;
   color: white;
   border: none;
 }
@@ -214,6 +222,18 @@ button:hover {
   background: red;
   padding: 2px;
   border-radius: 2px;
+}
+
+.login {
+  text-align: center;
+  padding: 10px;
+  z-index: 100;
+}
+.login input {
+  width: 100px;
+  padding: 5px;
+  border-radius: 20px;
+  margin: 10px 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

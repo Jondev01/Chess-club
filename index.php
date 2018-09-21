@@ -11,6 +11,7 @@
 </head>
 <body>
 	<nav>
+		<?php displayLogin();?>
 		<ul>
 			<a class="current" href=#><li>Startseite</li></a>
 			<a href="pages/about.php"><li>Über uns</li></a>
@@ -28,11 +29,6 @@
 	</header>
 
 	<div class="container">
-		<form id="login" method="post" action="php/login.php">
-		<input type="text" placeholder="Benutzername" name="username"/>
-		<input type="password" placeholder="Passwort" name="password"/>
-		<button type="submit" name="login">Anmelden</button>
-		</form>
 		<h1> Aktuell </h1>
 		<?php if(isset($_SESSION['rights']) &&  $_SESSION['rights']== "admin")
 				displayAddPost();
