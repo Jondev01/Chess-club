@@ -8,6 +8,7 @@
 	<title>SK</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/styles.css">
+	<script src="../ckeditor/ckeditor.js"></script>
 </head>
 <body>
 	<header class="fixed-header">

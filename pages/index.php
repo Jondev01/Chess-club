@@ -23,5 +23,10 @@
 		</section>
 	</div>
 	<script src="../js/main.js"></script>
+	<script>
+            // Replace the <textarea id="editor1"> with a CKEditor
+            // instance, using default configuration.
+            CKEDITOR.replace( 'ckeditor' );
+    </script>
 </body>
 </html>
