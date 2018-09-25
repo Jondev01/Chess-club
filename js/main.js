@@ -26,7 +26,7 @@ function deletePost(el){
     		location.reload(); 
     	}
   	};
- 	 xhttp.open("POST", "php/scripts.php", true);
+ 	 xhttp.open("POST", "../php/scripts.php", true);
  	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	 xhttp.send(`deletePost=${id}`);
 }
@@ -90,7 +90,7 @@ function displayMorePosts(el){
     		document.getElementById('posts').innerHTML += this.responseText;
     	}
   	};
- 	 xhttp.open("POST", "php/scripts.php", true);
+ 	 xhttp.open("POST", "../php/scripts.php", true);
  	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	 xhttp.send(`displayMorePosts=${displayMorePosts.posts}`);
 }
@@ -136,7 +136,7 @@ function logout(){
     		return false;
     	}
   	};
- 	 xhttp.open("POST", "php/login.php", true);
+ 	 xhttp.open("POST", "../php/login.php", true);
  	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	 xhttp.send(`logout=true`);
 }

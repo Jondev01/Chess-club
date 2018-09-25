@@ -297,5 +297,12 @@ button:hover{
 	button {
 		@extend %box-shadow;
 	}
+	small {
+		margin-bottom: 10px;
+		display: block;
+		span{
+			font-weight: bold;
+		}
+	}
 }
 

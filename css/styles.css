@@ -235,5 +235,12 @@ button:hover {
   border-radius: 20px;
   margin: 10px 0;
 }
+.login small {
+  margin-bottom: 10px;
+  display: block;
+}
+.login small span {
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=styles.css.map */
