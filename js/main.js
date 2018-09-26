@@ -15,6 +15,12 @@ if(selectTeams !== null){
 	selectTeams.addEventListener("change", ()=>displayTeamMembers() );
 }
 
+function editPost(el){
+	el = el.parentNode;
+	let id = el.id;
+	window.location.href = `../pages/edit.php?id=${id}`;
+}
+
 function deletePost(el){
 	if(!confirm("Wollen Sie diesen Beitrag wirklich löschen?"))
 		return;
