@@ -111,7 +111,7 @@ function displayMoreComments(el){
     		document.getElementById(`comments${id}`).innerHTML += this.responseText;
     	}
   	};
- 	 xhttp.open("POST", "php/scripts.php", true);
+ 	 xhttp.open("POST", "../php/scripts.php", true);
  	 xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	 xhttp.send(`id=${id}&displayMoreComments=${displayMoreComments}`);
 }
