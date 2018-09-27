@@ -21,7 +21,7 @@
 		<form id="editPost" class="admin" method="POST" action="../php/scripts.php" enctype="multipart/form-data">
 			<input type="text" value="<?php echo $post->title;?>" name="title"/>
 			<input type="text" value="<?php echo $post->author;?>" name="author"/>
-			<input type="file" name="fileToUpload" id="fileToUpload">
+			<input type="file" name="fileToUpload">
 			<input hidden name="id" value="<?php echo $post->id;?>">
 			<textarea name="text" value="<?php echo $post->text;?>" class="ckeditor"> <?php echo $post->text;?> </textarea>
 			<button type="submit" name="editPost">Abschicken</button>
